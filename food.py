@@ -2,9 +2,9 @@ from turtle import Turtle
 import random
 
 
-class Food(Turtle):  # food class inherits from turtle class
+class Food(Turtle):  
     def __init__(self):
-        super().__init__()  # we inherit turtle's init function
+        super().__init__() 
         self.shape('circle')
         self.penup()
         self.shapesize(stretch_len=0.5, stretch_wid=0.5)  # we created 10x10 circle
