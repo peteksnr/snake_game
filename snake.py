@@ -26,11 +26,10 @@ class Snake:
         self.snakes.append(new_snake)
 
     def extend(self):
-        self.add_segment(self.snakes[-1].position())  # we are adding a new segment to our snake at the position of the last segment of the snake
+        self.add_segment(self.snakes[-1].position())  
 
     def move(self):
-        for seg_num in range(len(self.snakes) - 1, 0, -1):  # first param is starting number
-            # second number is where will be stopped and the last number is step size
+        for seg_num in range(len(self.snakes) - 1, 0, -1):
             new_x = self.snakes[seg_num - 1].xcor()
             new_y = self.snakes[seg_num - 1].ycor()
             self.snakes[seg_num].goto(new_x, new_y)
@@ -44,11 +43,11 @@ class Snake:
         self.head = self.snakes[0]
 
     def up(self):
-        if self.head.heading() != DOWN:  # when our snake faces downwards it cant turn back to upwards
+        if self.head.heading() != DOWN: 
             self.head.setheading(UP)
 
     def down(self):
-        if self.head.heading() != UP:  # when our snake faces upwards it cant turn back to downwards
+        if self.head.heading() != UP: 
             self.head.setheading(DOWN)
 
     def left(self):
